@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    background-size: 100%;
+}
+
+.blok-pierwszy-najwiekszy {
+    background-color: green;
+    width: 420px;
+    height: 420px;
+    position: relative;
+    margin: 50% auto;
+}
+
+.blok-drugi-mniejszy {
+	background-color: red;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    margin: 0;
+}
+
+.blok-trzeci-mniejszy {
+	background-color: yellow;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    margin: 140px auto;
+}
+
+.blok-czwarty-mniejszy {
+	background-color: purple;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    margin: 280px auto;
+}
+
+.blok-piaty-mniejszy {
+	background-color: blue;
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    margin: 0 140px;
+}
+
