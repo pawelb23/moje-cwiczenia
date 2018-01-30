@@ -9,7 +9,6 @@ body {
     height: 420px;
     position: relative;
     margin: 50% auto;
-    border: 2px solid white;
 }
 
 .blok-red-mniejszy {
@@ -85,7 +84,7 @@ body {
 }
 
 div > h1 {
-    border: 1px solid white;
+    border: 3px solid white;
 }
 
 .kolojeden {
@@ -149,7 +148,7 @@ div > h1 {
 }
 
 .kolosiedem {
-      background-color: orange;
+    background-color: orange;
     width: 70px;
     height: 70px;
     position: absolute;
@@ -159,7 +158,7 @@ div > h1 {
 }
 
 .koloosiem {
-      background-color: yellow;
+    background-color: yellow;
     width: 70px;
     height: 70px;
     position: absolute;
@@ -169,7 +168,7 @@ div > h1 {
 }
 
 .kolodziewiec {
-      background-color: black;
+    background-color: black;
     width: 70px;
     height: 70px;
     position: absolute;
@@ -178,6 +177,6 @@ div > h1 {
     left: 35px;
 }
 
-h1> p {
-     border: 2px solid black;
+h1 > p {
+    border: 2px solid black;
 }
