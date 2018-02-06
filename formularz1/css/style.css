@@ -58,4 +58,8 @@ input, select, textarea {
 textarea {
     resize: none;
 }
+
+p.plec {
+    padding-left: 12px;
+}
 /**/
