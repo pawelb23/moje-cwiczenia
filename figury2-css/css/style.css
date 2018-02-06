@@ -8,166 +8,116 @@ body {
     width: 420px;
     height: 420px;
     position: relative;
-    margin: 50% auto;
+    margin: 25% auto;
 }
 
 .blok-red-mniejszy {
     background-color: red;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 0;
 }
 
 .blok-yellow-mniejszy {
     background-color: yellow;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 140px auto;
 }
 
 .blok-purple-mniejszy {
     background-color: purple;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 280px auto;
 }
 
 .blok-blue-mniejszy {
     background-color: blue;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 0 140px;
 }
 
 .blok-black-mniejszy {
     background-color: black;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 140px 140px;
 }
 
 .blok-gray-mniejszy {
     background-color: gray;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 280px 140px;
 }
 
 .blok-green-mniejszy {
     background-color: green;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 0px 280px;
 }
 
 .blok-orange-mniejszy {
     background-color: orange;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 140px 280px;
 }
 
 .blok-pink-mniejszy {
     background-color: pink;
-    width: 140px;
-    height: 140px;
-    position: absolute;
     margin: 280px 280px;
 }
 
-div > h1 {
+div#najwiekszy-blok > div {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+}
+
+div#najwiekszy-blok > div {
     border: 3px solid white;
 }
 
 .kolojeden {
     background-color: pink;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
+
 }
 
 .kolodwa {
     background-color: gray;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
 }
 
 .kolotrzy {
     background-color: purple;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
 }
 
 .kolocztery {
     background-color: green;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
 }
 
 .kolopiec {
     background-color: red;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
 }
+
 
 .koloszesc {
     background-color: blue;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
+
 }
 
 .kolosiedem {
     background-color: orange;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
+
 }
 
 .koloosiem {
     background-color: yellow;
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    border-radius: 50px;
-    left: 35px;
+
 }
 
 .kolodziewiec {
     background-color: black;
+
+}
+
+div > p {
+    border: 2px solid black;
+}
+
+p {
     width: 70px;
     height: 70px;
     position: absolute;
-    border-radius: 50px;
-    left: 35px;
-}
-
-h1 > p {
-    border: 2px solid black;
+    border-radius: 70px;
+    margin: 0 auto;
+    left: 30px;
+    top: 30px;
 }
