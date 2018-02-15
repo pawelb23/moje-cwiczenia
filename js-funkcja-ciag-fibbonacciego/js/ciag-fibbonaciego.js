@@ -1,11 +1,11 @@
-function ciagFibbonaciego(n) {
+function ciagFibbonacciego(n) {
     if (n == 0) {
         return 0;
     } else if (n == 1) {
         return 1;
     } else {
         for (i = 0; i < n - 1; i++) {
-            var f = ciagFibbonaciego;
+            var f = ciagFibbonacciego;
             wynik = f(n - 1) + f(n - 2);
 
             return wynik;
@@ -14,7 +14,7 @@ function ciagFibbonaciego(n) {
     }
 }
 
-console.log(ciagFibbonaciego(19))
+console.log(ciagFibbonacciego(19))
 
 //========================================================
 //Orginalna wersja, z której korzystałem
