@@ -15,3 +15,13 @@ function ulozenieZnakow(nazwaPoczatkowa) {
 }
 
 ulozenieZnakow('Akademia 108');
+
+
+//----------------------------------------------
+//tak jest zgodnie z wzorem.
+
+function coWyjdzie(haslo) {
+    
+    return haslo.split('').sort().join('');
+}
+console.log(coWyjdzie('Akademia 108'));

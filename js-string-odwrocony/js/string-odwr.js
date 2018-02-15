@@ -35,3 +35,13 @@ function odwracanieStringa(napis) {
 }
 
 odwracanieStringa("Akademia 108");
+
+
+//----------------------------------------------
+//tak jest zgodnie z wzorem.
+
+function ulozenieZnakow(haslo) {
+    
+    return haslo.split('').reverse().join('');
+}
+console.log(ulozenieZnakow('Akademia 108'));

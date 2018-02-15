@@ -1,4 +1,4 @@
-function sumaIloczyn(liczby = [1, 2, 3, 4, 5, 6]) {
+function sumaIloczyn(liczby) {
     var suma = 0;
     var iloczyn = 1;
     var odKtorejLiczymy = 0;
@@ -11,4 +11,4 @@ function sumaIloczyn(liczby = [1, 2, 3, 4, 5, 6]) {
     console.log('iloczyn wynosi --- ' + iloczyn);
 }
 
-sumaIloczyn();
+sumaIloczyn([1, 2, 3, 4, 5, 6]);
