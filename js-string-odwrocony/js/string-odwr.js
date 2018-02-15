@@ -1,7 +1,7 @@
-function nieoczekiwanaZmiana (nazwaPoczatkowa = ["Akademia 108"]) {
+function nieoczekiwanaZmiana(nazwaPoczatkowa) {
 
-//    var nazwaPoczatkowa = "Akademia 108";
-    
+    //    var nazwaPoczatkowa = "Akademia 108";
+
     var rozdzielenie = nazwaPoczatkowa.split("");
 
     //console.log(rozdzielenie);
@@ -11,13 +11,27 @@ function nieoczekiwanaZmiana (nazwaPoczatkowa = ["Akademia 108"]) {
 
     var przestawionyNapis = literOdwrocenie.join("");
 
-    return przestawionyNapis;
-
+    console.log(przestawionyNapis);
 }
 
-var coWyszlo = nieoczekiwanaZmiana;
-console.log(coWyszlo);
+nieoczekiwanaZmiana('Akademia 108');
+
+//============================================================
+//    Wzór od Mariana
 
 
-//console.log(przestawionyNapis);
-//nieoczekiwanaZmiana();
+function odwracanieStringa(napis) {
+    //zamiana otrzymanego napisu na tablicę złożoną z jego znaków
+    var tablicaZeStringa = napis.split("");
+
+    //odwrócenie kolejności elementów tablicy
+    var odwrocenieTablicy = tablicaZeStringa.reverse();
+
+    //zamiana tablicy na napis
+    var odwroconyNapis = odwrocenieTablicy.join("");
+
+    //wysłanie napisu do konsoli
+    console.log(odwroconyNapis);
+}
+
+odwracanieStringa("Akademia 108");

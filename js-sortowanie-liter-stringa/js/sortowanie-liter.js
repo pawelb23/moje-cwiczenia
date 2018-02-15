@@ -1,6 +1,6 @@
-function ulozenieLiterek() {
+function ulozenieZnakow(nazwaPoczatkowa) {
 
-    var nazwaPoczatkowa = "Akademia 108";
+    //var nazwaPoczatkowa = "Akademia 108";
 
     var rozdzielenie = nazwaPoczatkowa.split("");
 
@@ -8,8 +8,10 @@ function ulozenieLiterek() {
 
     var przestawionyNapis = sortujemyDane.join("");
 
+
+    console.log(sortujemyDane);//to ja sobie wyświetlam w zadaniu nie jest raczej wymagane
     console.log(przestawionyNapis);
-    console.log(sortujemyDane);
+
 }
 
-ulozenieLiterek();
+ulozenieZnakow('Akademia 108');
