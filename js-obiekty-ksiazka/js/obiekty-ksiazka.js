@@ -21,6 +21,9 @@ var wiedzma = new Ksiazka ('Wiedźmin', 'Andrzej Sapkowski', false);
 
 var wszystkieKsiazki = [tadek, potopieni, wiedzma];
 
+console.log(tadek.opiszKsiazke());// odczyta pojedyńczą scieżkę na tym etapie
+console.log(wszystkieKsiazki[1].opiszKsiazke());// tak można sprawdzić dowolną książkę, w miejsce nawiasu kwadratowego podstawiamy cyfrę 0,1 lub 2 co wyświetli nam kolejne pozycje z tablicy książek powyżej
+
 function iloscPrzeczytanych(n) {
     var ilosc = 0; //wartość początkowa
     for (i = 0; i < n.length; i++) {
