@@ -1,4 +1,5 @@
 class Auto {
+    'use strict';
   constructor(marka, spalanie, przebieg, rokProdukcji, uszkodzony) {
     this.marka = marka;
     this.spalanie = spalanie;
@@ -78,7 +79,6 @@ console.log(sredniRocznyPrzebieg(komisMiki[1]));//--- wyświetla wynik w koncoli
 console.log('------------');
 for (var b=0; b < komisMiki.length; b++) {
     console.log( sredniRocznyPrzebieg(komis[b]) );
-    console.log('---------');
-    console.log(komisMiki[b].przebieg);
+    console.log(komisMiki[b].przebieg); // console.log jest tylko dla nas
 }
 
