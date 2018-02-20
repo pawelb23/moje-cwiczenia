@@ -2,7 +2,7 @@
 
 var tablica = [12, 67, 34, 23.01, 24, 2, 56, 8, 0x10, 23.02, 78, 34, 1e2, 45, 67, 98, 1];
 
-console.log('przed sortowaniem --- ' + tablica);
+console.log('przed sortowaniem --- [ ' + tablica + ' ]');
 
 function sortowanieBabelkowe(tablica) {
     for (var i = 0; i < tablica.length; i++) { //indeks, który pozwala przeskakiwać w pętli po kolejnych wartościach
@@ -17,7 +17,7 @@ function sortowanieBabelkowe(tablica) {
             }
         }
     }
-    console.log('po sortowaniu --- ' + tablica);
+    console.log('po sortowaniu --- [ ' + tablica + ' ]');
 }
 sortowanieBabelkowe(tablica);
 
