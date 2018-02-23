@@ -1,0 +1,39 @@
+body {
+    background-color: aqua;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+div.pod-przyciskiem,
+button {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.pod-przyciskiem {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    color: aliceblue;
+    margin-left: 16px;
+    /*    margin-top: -15px;*/
+}
+
+button {
+    background-color: green;
+    color: ivory;
+    font-size: 20px;
+    height: 35px;
+    width: 100px;
+    margin-left: 116px;
+    transform: translateX(-50%);
+    margin-top: 35px;
+}
+
+
+h2 {
+   font-size: 15px;
+    margin-top: 0;
+    padding-top: 30px;
+}
