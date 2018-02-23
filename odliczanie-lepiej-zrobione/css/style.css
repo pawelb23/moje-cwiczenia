@@ -1,0 +1,63 @@
+#container {
+    height: 700px;
+    position: relative;
+    text-align: center;
+    background: black;
+}
+
+.odliczanie {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    font-size: 120px;
+    background: black;
+    color: white;
+}
+
+.odliczanie::after {
+    content: "10";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    animation-name: zmiana_liczby;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+
+@keyframes zmiana_liczby {
+    10% {
+        content: "9";
+    }
+    20% {
+        content: "8";
+    }
+
+    30% {
+        content: "7";
+    }
+    40% {
+        content: "6";
+    }
+    50% {
+        content: "5";
+    }
+    60% {
+        content: "4";
+    }
+    70% {
+        content: "3";
+    }
+    80% {
+        content: "2";
+    }
+    90% {
+        content: "1";
+    }
+    100% {
+        content: "I love CSS :)";
+    }
+}
