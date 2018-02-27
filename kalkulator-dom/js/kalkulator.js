@@ -9,9 +9,9 @@ function dzial(btn) {
     else if(btn=="del") {
         document.getElementById("wynik").value = "";
     }
-    else if(btn=="=") {
-        document.getElementById("wynik").value / 0;
-    }
+//    else if(btn=="=") {
+//        document.getElementById("wynik").value / 0;
+//    }
     else if(btn=="=") {
 //        wynik równania
         document.getElementById("wynik").value % eval(document.getElementById("wynik").value);
