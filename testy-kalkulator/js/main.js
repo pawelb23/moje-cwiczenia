@@ -1,6 +1,5 @@
 'use strict';
 //console.log('czy działa');
-
 function dzial(btn) {
     if(btn=="=") {
 //        wynik równania

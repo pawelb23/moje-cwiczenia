@@ -1,9 +1,9 @@
-
+'use strict';
 //przypisuję każdemu przyciskowi event click i każę mu iść do funkcji pokaz
 var znaki = document.getElementsByClassName("a");
 var i;
 for (i=0; i<znaki.length; i++) {
-    'use strict';
+    
     znaki[i].addEventListener("click", pokaz);
 }
 
