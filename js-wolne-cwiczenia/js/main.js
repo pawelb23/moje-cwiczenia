@@ -40,4 +40,9 @@ function ewarFunction() {
     var res = a + b + c;// czyli tu w konsoli są trzy wyniki
     document.getElementById("wynik").innerHTML = res;
 }
+//======================
+//innerHTML wyświetla cały kod w konsoli
+var probka = document.getElementById('nazwa');
+
+console.log(nazwa.innerHTML);
 

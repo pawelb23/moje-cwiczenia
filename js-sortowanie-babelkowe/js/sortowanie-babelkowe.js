@@ -7,9 +7,9 @@ var tablica = [12, 67, 34, 23.01, 24, 2, 56, 8, 0x10, 23.02, 78, 34, 1e2, 45, 67
 console.log('przed sortowaniem --- [ ' + tablica + ' ]');
 
 function sortowanieBabelkowe(tablica) {
-    for (var i = 0; i < tablica.length; i++) { //indeks, który pozwala przeskakiwać w pętli po kolejnych wartościach
+    for (var i = 0; i < tablica.length; i++) { //indeks, który pozwala przeskakiwać w pętli po kolejnych wartościach (I pętla)
 
-        for (var n = 0; n < tablica.length; n++) { //n - odnosi się do kolejnych wartości w tablicy (czyli 12,67,34 itp.)
+        for (var n = 0; n < tablica.length; n++) { //n - odnosi się do kolejnych wartości w tablicy (czyli 12,67,34 itp.) (II pętla)
 
             if (tablica[n] > tablica[n + 1]) { //porównanie kolejnych liczb czyli np. 24 > 2 jeżeli tak to
                 var zmiennaCzasowa; //wprowadzenie zmiennej aby było jak przyrównać liczby

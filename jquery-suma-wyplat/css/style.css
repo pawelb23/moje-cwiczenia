@@ -1,0 +1,21 @@
+body {
+    background-color: aquamarine;
+}
+
+* {
+    color: green;
+}
+
+div#employees {
+    height: 225px;
+    width: 300px;
+    border: dotted brown;
+    padding-left: 40px;
+    background-color: bisque;
+    border-radius: 25px;
+}
+
+button#count-sum {
+    margin-left: 80px;
+    margin-top: 30px;
+}

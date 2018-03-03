@@ -1,0 +1,22 @@
+body {
+    background-color: aquamarine;
+}
+* {
+    font-size: 17px;
+}
+button#gora, button#dol {
+    color: aliceblue;
+    width: 80px;
+}
+
+button#gora {
+    background-color: darkgreen;
+}
+
+button#dol {
+    background-color: brown;
+}
+
+p {
+    padding-left: 9px;
+}
