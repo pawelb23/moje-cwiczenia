@@ -1,17 +1,19 @@
+ 'use strict';
+
 function ciagFibbonacciego(n) {
+   
     if (n == 0) {
         return 0;
     } else if (n == 1) {
         return 1;
     } else {
-        for (i = 0; i < n - 1; i++) {
+        for (var i = 0; i < n - 1; i++) {
             var f = ciagFibbonacciego;
-            wynik = f(n - 1) + f(n - 2);
+           var wynik = f(n - 1) + f(n - 2);
 
             return wynik;
         }
-
-    }
+    }  
 }
 
 console.log(ciagFibbonacciego(19))
