@@ -29,6 +29,9 @@
 
 
 @keyframes zmiana_liczby {
+    0%{
+        content: "10";
+    }
     10% {
         content: "9";
     }
