@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+
+}
+
+p {
+    font-family: monospace;
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 0;
+}
+
+/*@media all and (min-width: 1171px) {*/
+
+div.tlo {
+    background-image: url(../img/man-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+p {
+    margin-left: 2vw;
+}
+
+p.iam {
+    font-size: 35px;
+    font-weight: 700;
+    padding-top: 45vh;
+}
+
+p.front {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+/*}*/
+
+@media (min-width: 992px) and (max-width: 1170px) {
+    div.tlo {
+        background-image: url(../img/man-2.jpg);
+        height: 70vh;
+    }
+
+    p {
+        margin-left: 60vw;
+    }
+
+    p.iam {
+        font-size: 25px;
+        font-weight: 700;
+        padding-top: 10vh;
+    }
+
+    p.front {
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+}
+
+@media (max-width: 991px) {
+    div.tlo {
+        background-image: url(../img/man-1.jpg);
+        color: black;
+        height: 50vh;
+        text-align: center;
+    }
+
+    p.iam {
+        font-size: 30px;
+        font-weight: 700;
+        padding-top: 55vh;
+    }
+
+    p.front {
+        font-size: 35px;
+        font-weight: bold;
+    }
+}
