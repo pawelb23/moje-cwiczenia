@@ -57,7 +57,11 @@ section h3 {
     border: 1px solid #0ed8d6;
 }
 
+
 /* GENERAL STYLES - END */
+
+
+
 /* NAVIGATION - START */
 
 #main-nav {
@@ -76,6 +80,7 @@ section h3 {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     transition: all .4s;
+    text-align: right;
 }
 
 #main-nav .nav-item a:hover {
