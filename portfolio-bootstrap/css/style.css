@@ -138,15 +138,15 @@ p {
 }
 
 figure#peter > img {
-	width: 50%;
+/*	width: 30%;*/
 	margin: 0;
 	float: left;
 	text-align: center;
-    min-width: 150px;
+    min-width: 220px;
 }
 
 article.about-content > p {
-	width: 70%;
+/*	width: 70%;*/
 /*	float: left;*/
 }
 
@@ -158,8 +158,8 @@ figure > img {
 }
 
 article.about-content > p {
-    float: left;
-    padding-left: 35px;
+/*    float: right;*/
+/*    padding-left: 35px;*/
 }
 /* Section About - Stop */
 
@@ -243,8 +243,10 @@ div.portfolio-items #portfolio-item-1 {
 	height: 100%;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
-/*	position: absolute;*/
+	position: relative;
 	font-size: initial;
+    padding: 10px;
+/*    padding zastąpił margines z sekcji .item-content*/
 }
 
 #portfolio .portfolio-items .portfolio-item .item-mask:hover {
@@ -254,7 +256,8 @@ div.portfolio-items #portfolio-item-1 {
 #portfolio .portfolio-items .portfolio-item .item-mask .item-content {
 	height: 330px;
 	border: 1px solid #fff;
-	margin: 10px;
+/*	margin: 10px;*/
+/*    margin w przypadku bootstrapa powodował, że górny margines nie działał trzeba było go zastąpić paddingiem w sekcji .item-mask*/
 	position: relative;
 }
 
@@ -292,6 +295,12 @@ div.portfolio-items #portfolio-item-1 {
 
 /* Section Contact - Start */
 
+/*
+div#sekcja-opis {
+    float: left;
+}
+*/
+
 #contact {
 	background-color: #213b50;
 	color: #fff;
@@ -299,7 +308,7 @@ div.portfolio-items #portfolio-item-1 {
 }
 
 #contact .contact-data {
-	width: 50%;
+/*	width: 50%;*/
 	float: left;
 }
 
@@ -318,7 +327,7 @@ div.portfolio-items #portfolio-item-1 {
 	color: #1ac056;
 }
 
-#contact .contact-data .contact-social-icons a{
+.contact-social-icons a{
 	display: inline-block;
 	color: #fff;
 	height: 38px;
@@ -337,19 +346,29 @@ div.portfolio-items #portfolio-item-1 {
 }
 
 #contact .contact-form {
-	width: 50%;
-	float: left;
+/*	width: 50%;*/
+	float: right;
 	margin-top: 100px;
+/*
+       display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+*/
 }
 
 #contact .contact-form form input,
-#contact .contact-form form textarea{
-	width: 100%;
-	padding: 15px;
+#contact .contact-form form textarea {
+    width: 100%;
+    padding: 15px;
     margin-bottom: 15px;
     background-color: #2b4a64;
     border: #2b4a64 0px;
-    color: #fff
+    color: #fff;
+/*
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+*/
 }
 
 #contact .contact-form form input:focus,
@@ -366,6 +385,7 @@ div.portfolio-items #portfolio-item-1 {
     padding: 15px 30px;
     float: right;
     border: 1px #1ac056 solid;
+/*    margin-right: -100%;*/
 }
 
 #contact .contact-form form input[type="submit"]:hover{
@@ -373,9 +393,15 @@ div.portfolio-items #portfolio-item-1 {
     color: #1ac056;
 }
 
+/*
+.contact-form-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+*/
+
 /* Section Contact - Stop */
-
-
 
 
 

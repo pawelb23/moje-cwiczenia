@@ -1,5 +1,6 @@
+'use strict';
+
 class Auto {
-    'use strict';
   constructor(marka, spalanie, przebieg, rokProdukcji, uszkodzony) {
     this.marka = marka;
     this.spalanie = spalanie;
