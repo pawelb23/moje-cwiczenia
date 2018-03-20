@@ -20,6 +20,8 @@ div#container {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+    min-height: 100px;
+    min-width: 50px;
 }
 
 input {
