@@ -3,12 +3,14 @@ console.log('czy działa');
 
 var myVar1 = 3;
 var myVar2 = 2;
+var myVar3 = 'string';
 console.log(myVar1 + myVar2); //5
 console.log(myVar1 - myVar2); //1
 console.log(myVar1 * myVar2); //6
 console.log(myVar1 / myVar2); //1.5
 console.log(typeof myVar1); //typ
 console.log(typeof myVar2); //typ
+console.log(typeof myVar3); //typ
 
 //=============================
 //funkcja z clickiem --- tekst przy buttonie i przy paragrafie zmieni się kiedy naciśniemy na guzik lub paragraf (czyli tekst poniżej guzika)
