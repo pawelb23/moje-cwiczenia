@@ -40,7 +40,7 @@ function ewarFunction() {
     var c = eval("x + 17") + "<br>";
 
     var res = a + b + c;// czyli tu w konsoli są trzy wyniki
-    document.getElementById("wynik").innerHTML = res;
+    document.getElementById("wynik").innerHTML = res; // (+ wynik.innerHTML) - jeżeli to dopiszemy po 'res' to po naciśnięciu na przycisk, wyświetli się nam to wszystko na stronie (bez cudzy)
 }
 //======================
 //innerHTML wyświetla cały kod w konsoli
