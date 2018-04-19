@@ -46,5 +46,6 @@ function ewarFunction() {
 //innerHTML wyświetla cały kod w konsoli
 var probka = document.getElementById('nazwa');
 
+console.log(probka.innerHTML);
 console.log(nazwa.innerHTML);
-
+console.log(wynik.innerHTML);
