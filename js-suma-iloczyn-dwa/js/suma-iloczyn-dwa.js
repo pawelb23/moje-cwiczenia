@@ -20,24 +20,3 @@ function sumaIloczyn(liczby) {
 sumaIloczyn([1, 2, 3, 4, 5, 6]);
 
 //====================================
-
-//Dłuższa metoda z rozpisaniem
-
-function sumaIloczyn(liczby) {
-    'use strict';
-    var suma = 0;
-    var iloczyn = 1;
-    var odKtorejLiczymy = 0;
-    for (var i = odKtorejLiczymy; i < liczby.length; i++) {
-    var sumaWynik = 0; 
-      sumaWynik +=  suma + liczby[0] + liczby[1];
-    var iloczynWynik = 1; 
-        iloczynWynik = iloczyn + liczby[i];
-    }
-
-    console.log('suma wynosi --- ' + sumaWynik);
-    
-    console.log('iloczyn wynosi --- ' + iloczynWynik);
-}
-
-sumaIloczyn([1, 2, 3, 4, 5, 6]);
