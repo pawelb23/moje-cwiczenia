@@ -58,7 +58,7 @@ p {
 	z-index: 2;
 }
 
-#main-nav .toggle, [id=drop] {
+#main-nav .toggle, [id="drop"] {
   display: none;
 }
 
