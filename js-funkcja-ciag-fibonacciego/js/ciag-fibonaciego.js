@@ -38,4 +38,6 @@
 
  }
 
- console.log(fibonacci(19));
+console.log("");
+
+ console.log("Liczba Fibonacciego dla 19 wynosi: " + fibonacci(19));
