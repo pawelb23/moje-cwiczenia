@@ -7,19 +7,22 @@ function dzial(btn) {
 
     if (btn == '=') {
 
-
-        //po naciśnięciu wykonuje dziłanie widoczne w <input id="wynik">
+        // --- ZNAK RÓWNANIA --- po naciśnięciu wykonuje dziłanie widoczne w <input id="wynik">
         document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
 
         if (document.getElementById('wynik').value == 'undefined') {
 
             return document.getElementById('wynik').value = '';
 
-        } else if (document.getElementById('wynik').value == 'Infinity' || document.getElementById('wynik').value == '-Infinity') {
+        } else if (document.getElementById('wynik').value === 'Infinity' || document.getElementById('wynik').value === '-Infinity') {
 
-            return document.getElementById('wynik').value = 'Nooooo!!!';
+            document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('0')");
 
-            //        } else if (document.getElementById('wynik').value == 'Nooooo!!!') {
+            //document.querySelector('button.rowna-sie').classList.add('rowna-sie-na-zero');
+
+            return document.getElementById('wynik').value = 'ERROR';
+
+            //        } else if (document.getElementById('wynik').value == 'ERROR') {
             //
             //            document.getElementById('wynik').value = '0';
 
@@ -28,17 +31,25 @@ function dzial(btn) {
 
         }
 
+        // --- ZNAK DEL ---
     } else if (btn == 'del') {
+
+        document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('=')");
 
         document.getElementById('wynik').value = '0';
 
+        // --- ZNAK PRECENT ---
     } else if (btn == '%') {
 
         //zamiana na procenty
-        document.getElementById('wynik').value = eval(document.getElementById('wynik').value / 100);
+        document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
 
+        document.getElementById('wynik').value = (document.getElementById('wynik').value) / 100;
 
+        // --- WARTOŚĆ ZERO ---
     } else if (btn == '0') {
+
+        document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('=')");
 
         //             console.log('0.0');
 
@@ -60,17 +71,60 @@ function dzial(btn) {
 
             return document.getElementById('wynik').value += btn;
 
+        } else if (document.getElementById('wynik').value === 'ERROR') {
+
+            document.getElementById('wynik').value = '';
+
+            return document.getElementById('wynik').value += btn;
+
+        } else if (document.getElementById('wynik').value !== '') {
+
+            //            console.log('Spr/0');
+            if (document.getElementById('wynik').value.match(/\/0/g)) {
+                //                console.log('mat /');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\/0$/, '/');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else if (document.getElementById('wynik').value.match(/\*0/)) {
+                //                console.log('mat *');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\*0$/, '*');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else if (document.getElementById('wynik').value.match(/\+0/)) {
+                //                console.log('mat +');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\+0$/, '+');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else if (document.getElementById('wynik').value.match(/\-0/)) {
+                //                console.log('mat -');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\-0$/, '-');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else {
+
+                return document.getElementById('wynik').value += btn;
+
+            }
+
         } else {
 
             return document.getElementById('wynik').value += btn;
 
         }
 
-    } else if (btn == '1' || btn == '2' || btn == '3' || btn == '4' || btn == '5' || btn == '6' || btn == '7' || btn == '8' || btn == '9' || btn == '-') {
+        // --- WARTOSCI OD 1 DO 9 ---
+
+    } else if (btn == '1' || btn == '2' || btn == '3' || btn == '4' || btn == '5' || btn == '6' || btn == '7' || btn == '8' || btn == '9') {
+
+        document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('=')");
 
         //             console.log('1.0');
 
-        if (document.getElementById('wynik').value === '0' || document.getElementById('wynik').value === 'Nooooo!!!') {
+        if (document.getElementById('wynik').value === '0' || document.getElementById('wynik').value == 'ERROR') {
 
             document.getElementById('wynik').value = '';
 
@@ -81,6 +135,54 @@ function dzial(btn) {
             document.getElementById('wynik').value = '-';
 
             return document.getElementById('wynik').value += btn;
+
+        } else if (document.getElementById('wynik').value !== '') {
+
+            //            console.log('Spr/0');
+            if (document.getElementById('wynik').value.match(/\/0/g)) {
+                //                console.log('mat /');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\/0$/, '/');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else if (document.getElementById('wynik').value.match(/\*0/)) {
+                //                console.log('mat *');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\*0$/, '*');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else if (document.getElementById('wynik').value.match(/\+0/)) {
+                //                console.log('mat +');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\+0$/, '+');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else if (document.getElementById('wynik').value.match(/\-0/)) {
+                //                console.log('mat -');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\-0$/, '-');
+
+                return document.getElementById('wynik').value += btn;
+
+            } else {
+
+                return document.getElementById('wynik').value += btn;
+
+            }
+
+        } else {
+
+            return document.getElementById('wynik').value += btn;
+
+        }
+
+        // --- ZNAK MINUS ---
+    } else if (btn == '-') {
+
+        if (document.getElementById('wynik').value === '0' || document.getElementById('wynik').value === 'ERROR') {
+
+            document.getElementById('wynik').value = '';
+
+            document.getElementById('wynik').value += btn;
 
         } else {
 
@@ -97,3 +199,19 @@ function dzial(btn) {
     }
 
 }
+
+//function isEqualToClick (e) {
+//    
+//    e.preventDefault();
+//    
+// if (document.querySelector('button.rowna-sie-na-zero')){
+//     
+//     document.querySelector('button.rowna-sie').classList.remove('rowna-sie-na-zero');
+//     
+//     document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('=')");
+//        
+//    }
+//    
+//}
+//
+//document.querySelector('button.rowna-sie').addEventListener('click', isEqualToClick);
