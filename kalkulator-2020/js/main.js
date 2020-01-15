@@ -150,6 +150,8 @@ function dzial(btn) {
 
         // --- WARTOŚĆ ZERO ---
     } else if (btn == '0') {
+        
+//        document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
         document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('=')");
 
@@ -427,8 +429,8 @@ function dzial(btn) {
                 document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
 
-            } else if (document.getElementById('wynik').value.match(/[0-9]\.[0-9]/)) {
-                //                console.log('mat -');
+            } else if (document.getElementById('wynik').value.substring(0, inputActionString.value.length -1) == document.getElementById('wynik').value.match(/[0-9]\.[0-9]/)) {
+//                                console.log('kropka...');
 
                 document.getElementById('wynik').value += btn;
 
