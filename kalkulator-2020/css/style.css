@@ -1,3 +1,14 @@
+/*
+@font-face {
+    
+    src: url(../fonts-family/digital-7 .ttf);
+    font-family: Digital-7;
+    
+}
+    
+*/
+
+
 body {
     background-color: black;
     margin: 0;
@@ -47,6 +58,13 @@ input {
 
 div#wyswietlacz {
     position: relative;
+    
+}
+
+#wynik {
+	
+    font-family: Digital-7, sans-serif;
+    font-size: 2.3rem;
 }
 
 div#pierwszy-wiersz,
