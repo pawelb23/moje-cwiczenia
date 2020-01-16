@@ -1,11 +1,9 @@
 @font-face {
     
-    src: url(../fonts-family/digital-7 .ttf);
-    font-family: Digital-7;
+    src: url(../fonts-family/LcdSolid-VPzB.ttf);
+    font-family: LCD Solid;
     
-}
-    
-
+}   
 
 body {
     background-color: black;
@@ -61,8 +59,8 @@ div#wyswietlacz {
 
 #wynik {
 	
-    font-family: Digital-7, sans-serif;
-    font-size: 5.5vmin;
+    font-family: LCD Solid, sans-serif;
+    font-size: 4vmin;
 }
 
 div#pierwszy-wiersz,

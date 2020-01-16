@@ -7,6 +7,10 @@ function dzial(btn) {
 
     if (inputActionString.value.length > 10) {
 
+        document.querySelector('button.procent').setAttribute('onclick', "dzial('%')");
+
+        //        document.querySelector('button.procent').setAttribute('onclick', "dzial('')");
+
         if (btn == '=') {
 
             document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
@@ -22,7 +26,17 @@ function dzial(btn) {
             document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('/')");
 
             // --- ZNAK RÓWNANIA --- po naciśnięciu wykonuje dziłanie widoczne w <input id="wynik">
-            document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
+            if (document.getElementById('wynik').value.match(/[\-,\+,\*,\/]$/)) {
+                //                                   console.log('znak ===');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\-,\+,\*,\/]$/, '');
+
+                document.getElementById('wynik').value = eval(document.getElementById('wynik').value)
+
+            } else {
+
+                document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
+
+            }
 
             // --- ZNAK DEL ---
         } else if (btn == 'del') {
@@ -47,6 +61,8 @@ function dzial(btn) {
 
         } else if (btn == '%') {
 
+            //                        console.log('%%%');
+
             document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
             document.querySelector('button.procent').setAttribute('onclick', "dzial('%')");
@@ -58,6 +74,14 @@ function dzial(btn) {
             document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('*')");
 
             document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('/')");
+
+            if (document.getElementById('wynik').value.match(/[\-,\+,\*,\/]$/)) {
+                //                console.log('znak %%%');
+                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\-,\+,\*,\/]$/, '');
+
+                document.getElementById('wynik').value = eval(document.getElementById('wynik').value)
+
+            }
 
             //zamiana na procenty
             document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
@@ -73,6 +97,8 @@ function dzial(btn) {
     // --- ZNAK RÓWNANIA ---
     if (btn == '=') {
 
+        //        console.log('=====');
+
         document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
         document.querySelector('button.procent').setAttribute('onclick', "dzial('%')");
@@ -86,26 +112,42 @@ function dzial(btn) {
         document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('/')");
 
         // --- ZNAK RÓWNANIA --- po naciśnięciu wykonuje dziłanie widoczne w <input id="wynik">
-        document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
+        //                document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
 
-        if (document.getElementById('wynik').value == 'undefined') {
+        if (document.getElementById('wynik').value.match(/[\-,\+,\*,\/]$/)) {
 
-            return document.getElementById('wynik').value = '';
+            //            console.log('znak ===');
 
-        } else if (document.getElementById('wynik').value === 'Infinity' || document.getElementById('wynik').value === '-Infinity') {
+            document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\-,\+,\*,\/]$/, '');
 
-            document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('0')");
-
-            //document.querySelector('button.rowna-sie').classList.add('rowna-sie-na-zero');
-
-            return document.getElementById('wynik').value = 'ERROR';
-
-            //        } else if (document.getElementById('wynik').value == 'ERROR') {
-            //
-            //            document.getElementById('wynik').value = '0';
+            document.getElementById('wynik').value = eval(document.getElementById('wynik').value)
 
         } else {
+
+            //            console.log('==3');
+
+            // --- ZNAK RÓWNANIA --- po naciśnięciu wykonuje dziłanie widoczne w <input id="wynik">            
             document.getElementById('wynik').value = eval(document.getElementById('wynik').value)
+
+            if (document.getElementById('wynik').value == 'undefined') {
+
+                return document.getElementById('wynik').value = '';
+
+            } else if (document.getElementById('wynik').value == 'Infinity' || document.getElementById('wynik').value == '-Infinity') {
+
+                //                console.log('===2');
+
+                document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('0')");
+
+                //document.querySelector('button.rowna-sie').classList.add('rowna-sie-na-zero');
+
+                return document.getElementById('wynik').value = 'ERROR';
+
+                //                    } else if (document.getElementById('wynik').value == 'ERROR') {
+                //            
+                //                        document.getElementById('wynik').value = '0';
+
+            }
 
         }
 
@@ -131,12 +173,34 @@ function dzial(btn) {
         // --- ZNAK PROCENT ---
     } else if (btn == '%') {
 
+        console.log('%%%');
+
+        document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
+
+        document.querySelector('button.plus').setAttribute('onclick', "dzial('+')");
+
+        document.querySelector('button.minus').setAttribute('onclick', "dzial('-')");
+
+        document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('*')");
+
+        document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('/')");
+
+        if (document.getElementById('wynik').value.match(/[\-,\+,\*,\/]$/)) {
+
+            console.log('znak %%%');
+
+            document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\-,\+,\*,\/]$/, '');
+
+            document.getElementById('wynik').value = eval(document.getElementById('wynik').value)
+
+        }
+
         //zamiana na procenty
         document.getElementById('wynik').value = eval(document.getElementById('wynik').value);
 
         document.getElementById('wynik').value = (document.getElementById('wynik').value) / 100;
 
-        //            document.querySelector('button.kropka').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.kropka').setAttribute('onclick', "dzial('')");
 
         document.querySelector('button.procent').setAttribute('onclick', "dzial('%')");
 
@@ -150,8 +214,10 @@ function dzial(btn) {
 
         // --- WARTOŚĆ ZERO ---
     } else if (btn == '0') {
-        
-//        document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
+
+        //        console.log('...');
+
+        //        document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
         document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('=')");
 
@@ -165,11 +231,11 @@ function dzial(btn) {
 
         document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('/')");
 
-        //             console.log('0.0');
+        //                     console.log('0.0');
 
         if (document.getElementById('wynik').value === '') {
 
-            //             console.log('0.1');
+            //                         console.log('0.1');
 
             return document.getElementById('wynik').value += btn;
 
@@ -193,27 +259,27 @@ function dzial(btn) {
 
         } else if (document.getElementById('wynik').value !== '') {
 
-            //            console.log('Spr/0');
+            //                        console.log('Spr/0');
             if (document.getElementById('wynik').value.match(/\/0/)) {
-                //                console.log('mat /');
+                //                                console.log('mat /');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\/0$/, '/');
 
                 return document.getElementById('wynik').value += btn;
 
             } else if (document.getElementById('wynik').value.match(/\*0/)) {
-                //                console.log('mat *');
+                //                                console.log('mat *');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\*0$/, '*');
 
                 return document.getElementById('wynik').value += btn;
 
             } else if (document.getElementById('wynik').value.match(/\+0/)) {
-                //                console.log('mat +');
+                //                                console.log('mat +');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\+0$/, '+');
 
                 return document.getElementById('wynik').value += btn;
 
             } else if (document.getElementById('wynik').value.match(/\-0/)) {
-                //                console.log('mat -');
+                //                                console.log('mat -');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\-0$/, '-');
 
                 return document.getElementById('wynik').value += btn;
@@ -245,7 +311,7 @@ function dzial(btn) {
 
         document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('/')");
 
-        //             console.log('1.0');
+        //                     console.log('1.0');
 
         if (document.getElementById('wynik').value === '0' || document.getElementById('wynik').value == 'ERROR' || document.getElementById('wynik').value == 'NaN') {
 
@@ -261,27 +327,27 @@ function dzial(btn) {
 
         } else if (document.getElementById('wynik').value !== '') {
 
-            //            console.log('Spr/0');
+            //                        console.log('Spr/0');
             if (document.getElementById('wynik').value.match(/\/0/)) {
-                //                console.log('mat /');
+                //                                console.log('mat /');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\/0$/, '/');
 
                 return document.getElementById('wynik').value += btn;
 
             } else if (document.getElementById('wynik').value.match(/\*0/)) {
-                //                console.log('mat *');
+                //                                console.log('mat *');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\*0$/, '*');
 
                 return document.getElementById('wynik').value += btn;
 
             } else if (document.getElementById('wynik').value.match(/\+0/)) {
-                //                console.log('mat +');
+                //                                console.log('mat +');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\+0$/, '+');
 
                 return document.getElementById('wynik').value += btn;
 
             } else if (document.getElementById('wynik').value.match(/\-0/)) {
-                //                console.log('mat -');
+                //                                console.log('mat -');
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\-0$/, '-');
 
                 return document.getElementById('wynik').value += btn;
@@ -301,48 +367,52 @@ function dzial(btn) {
         // --- ZNAK MINUS ---
     } else if (btn == '-') {
 
+        //        console.log('ac');
+
         document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
-        document.querySelector('button.procent').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.procent').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.plus').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.plus').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.minus').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.minus').setAttribute('onclick', "dzial('')");
+        //
+        //        document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('')");
+        //        //
+        //        document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('')");
-
-        document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('')");
-
-        if (document.getElementById('wynik').value === '0' || document.getElementById('wynik').value === 'ERROR') {
+        if (document.getElementById('wynik').value === '0' || document.getElementById('wynik').value === 'ERROR' || document.getElementById('wynik').value === 'NaN') {
 
             document.getElementById('wynik').value = '';
 
             document.getElementById('wynik').value += btn;
 
-        } else if (document.getElementById('wynik').value.match(/\+$/) || document.getElementById('wynik').value.match(/\*$/) || document.getElementById('wynik').value.match(/\/$/) || document.getElementById('wynik').value.match(/\.$/)) {
+        } else if (document.getElementById('wynik').value.match(/[\+,\-,\*,\/,\.]$/)) {
 
-            return document.getElementById('wynik').value;
+            //            console.log('znak ---');
+
+            return document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\+,\-,\*,\/,\.]$/, '-');
 
         } else {
-
+            //            console.log('btn');
             document.getElementById('wynik').value += btn;
 
         }
 
         // --- ZNAKI PLUS, MNOŻENIE, DZIELENIE ---
     } else if (btn == '+' || btn == '*' || btn == '/') {
-
+        //        console.log('prb...');
         document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
-        document.querySelector('button.procent').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.procent').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.plus').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.plus').setAttribute('onclick', "dzial('')");
 
         //        document.querySelector('button.minus').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('')");
 
         if (document.getElementById('wynik').value) {
 
@@ -352,7 +422,34 @@ function dzial(btn) {
 
             } else if (document.getElementById('wynik').value === 'NaN' || document.getElementById('wynik').value === 'ERROR') {
 
+                //                console.log('prb..2');
+
                 return document.getElementById('wynik').value;
+
+            } else if (document.getElementById('wynik').value.match(/[\+,\-,\*,\/,\.]$/)) {
+
+                console.log('znak ---');
+
+                if (document.getElementById('wynik').value.match(/[\+,\*,\/,\.]$/)) {
+
+                    document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\+,\*,\/,\.]$/, '');
+
+                    document.getElementById('wynik').value += btn;
+
+                } else if (document.getElementById('wynik').value == '-') {
+
+                    document.getElementById('wynik').value == '-';
+
+                    console.log('tuu');
+
+                } else {
+                    document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\-]$/, '');
+
+                    document.getElementById('wynik').value += btn;
+
+                    console.log('i tuu');
+
+                }
 
             } else {
 
@@ -365,17 +462,19 @@ function dzial(btn) {
         // --- ZNAK KROPKA ---
     } else if (btn == '.') {
 
+        //        console.log('---2');
+
         document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
-        document.querySelector('button.procent').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.procent').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.plus').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.plus').setAttribute('onclick', "dzial('')");
 
         //        document.querySelector('button.minus').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.mnozenie').setAttribute('onclick', "dzial('')");
 
-        document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('')");
+        //        document.querySelector('button.dzielenie').setAttribute('onclick', "dzial('')");
 
         if (document.getElementById('wynik').value === '') {
 
@@ -383,11 +482,13 @@ function dzial(btn) {
 
         } else if (document.getElementById('wynik').value !== '') {
 
+            //            console.log('---3');
+
             document.querySelector('button.kropka').setAttribute('onclick', "dzial('')");
 
-            //            console.log('Spr/0');
+            //                        console.log('Spr/0');
             if (document.getElementById('wynik').value.match(/\/$/)) {
-                //                console.log('mat /');
+                //                                console.log('mat /');
                 document.getElementById('wynik').value += btn;
 
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\/\.$/, '/');
@@ -397,7 +498,7 @@ function dzial(btn) {
                 return document.getElementById('wynik').value;
 
             } else if (document.getElementById('wynik').value.match(/\*$/)) {
-                //                console.log('mat *');
+                //                                console.log('mat *');
                 document.getElementById('wynik').value += btn;
 
                 document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\*\.$/, '*');
@@ -408,7 +509,7 @@ function dzial(btn) {
                 return document.getElementById('wynik').value;
 
             } else if (document.getElementById('wynik').value.match(/\+$/)) {
-                //                console.log('mat +');
+                //                                console.log('mat +');
 
                 document.getElementById('wynik').value += btn;
 
@@ -420,7 +521,7 @@ function dzial(btn) {
                 return document.getElementById('wynik').value;
 
             } else if (document.getElementById('wynik').value.match(/\-$/)) {
-                //                console.log('mat -');
+                //                                console.log('mat -');
 
                 document.getElementById('wynik').value += btn;
 
@@ -429,53 +530,33 @@ function dzial(btn) {
                 document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
 
-            } else if (document.getElementById('wynik').value.substring(0, inputActionString.value.length -1) == document.getElementById('wynik').value.match(/[0-9]\.[0-9]/)) {
-//                                console.log('kropka...');
-
-                document.getElementById('wynik').value += btn;
-
-                document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\.$/, '');
-
-                document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
-
-
-            } 
-            
-            else {
+            } else {
 
                 document.getElementById('wynik').value += btn;
 
                 //                            document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
             }
+
+        } else if (document.getElementById('wynik').value.substring(0, inputActionString.value.length - 1) == document.getElementById('wynik').value.match(/[0-9]\.[0-9]{1-10}/)) {
+
+            //            console.log('kropka...');
+
+            document.getElementById('wynik').value += btn;
+
+            document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/\.$/, '');
+
+            document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
+
+
         }
 
     } else {
 
         //odpowiada za to co widzimy w <input id="wynik">
         document.getElementById('wynik').value += btn;
-
-        document.querySelector('button.kropka').setAttribute('onclick', "dzial('')");
-
-        console.log(btn);
+        //                console.log(btn);
 
     }
 
 }
-
-
-//function isEqualToClick (e) {
-//    
-//    e.preventDefault();
-//    
-// if (document.querySelector('button.rowna-sie-na-zero')){
-//     
-//     document.querySelector('button.rowna-sie').classList.remove('rowna-sie-na-zero');
-//     
-//     document.querySelector('button.rowna-sie').setAttribute('onclick', "dzial('=')");
-//        
-//    }
-//    
-//}
-//
-//document.querySelector('button.rowna-sie').addEventListener('click', isEqualToClick);
