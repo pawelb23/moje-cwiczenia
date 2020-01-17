@@ -176,7 +176,7 @@ function dzial(btn) {
         // --- ZNAK PROCENT ---
     } else if (btn == '%') {
 
-        console.log('%%%');
+//        console.log('%%%');
 
         document.querySelector('button.kropka').setAttribute('onclick', "dzial('.')");
 
@@ -190,7 +190,7 @@ function dzial(btn) {
 
         if (document.getElementById('wynik').value.match(/[\-,\+,\*,\/]$/)) {
 
-            console.log('znak %%%');
+//            console.log('znak %%%');
 
             document.getElementById('wynik').value = document.getElementById('wynik').value.replace(/[\-,\+,\*,\/]$/, '');
 
