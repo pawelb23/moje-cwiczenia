@@ -1,3 +1,5 @@
+  'use strict';
+
 var jsonOsoby = {
     "pracownicy": [
         {
@@ -15,10 +17,10 @@ var jsonOsoby = {
     ]
 }
 
-console.log(jsonOsoby.pracownicy);
+//console.log(jsonOsoby.pracownicy);
 
 jsonOsoby.pracownicy.forEach(function (element, index) {
-    console.log('index' + index + ' --- ' + element.firstName + ' ' + element.lastName);
+    console.log('Index ' + index + ' --- ' + element.firstName + ' ' + element.lastName);
 });
 
 //======================================================
@@ -41,9 +43,11 @@ var jsonOsoby = {
     ]
 }
 
-console.log(jsonOsoby.pracownicy);
+console.log('');
+
+//console.log(jsonOsoby.pracownicy);
 
 jsonOsoby.pracownicy.forEach(function (element, index) {
     var iteracja = index + 1;
-    console.log('index' + iteracja + ' --- ' + element.firstName + ' ' + element.lastName);
+    console.log('Numer ' + iteracja + ' --- ' + element.firstName + ' ' + element.lastName);
 });
